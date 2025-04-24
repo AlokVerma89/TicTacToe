@@ -37,10 +37,18 @@ const printer = (event)=>{
     if(board_array[element.id]==="E") 
    {
     total_turn++;
+    let img1 = document.getElementsByClassName('image1');
+    let img2 = document.getElementsByClassName('image2');
     if(turn==='O')
     {
         element.innerHTML = "O";
         board_array[element.id] = "O";
+        img1[0].classList.add('scale-img');
+
+        setTimeout(() => {
+            img1[0].classList.remove('scale-img');
+        }, 500);
+
         if(checkWinner())
         {
             document.getElementById('winningMessage').innerHTML = "Winner is O";
@@ -52,6 +60,13 @@ const printer = (event)=>{
     else{
         element.innerHTML = "X";
         board_array[element.id] = "X";
+
+        img2[0].classList.add('scale-img');
+
+        setTimeout(() => {
+            img2[0].classList.remove('scale-img');
+        }, 500);
+
         if(checkWinner())
         {
             document.getElementById('winningMessage').innerHTML = "Winner is X";
