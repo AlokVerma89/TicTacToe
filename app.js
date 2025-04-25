@@ -47,7 +47,7 @@ const printer = (event)=>{
 
         setTimeout(() => {
             img1[0].classList.remove('scale-img');
-        }, 500);
+        }, 250);
 
         if(checkWinner())
         {
@@ -65,7 +65,7 @@ const printer = (event)=>{
 
         setTimeout(() => {
             img2[0].classList.remove('scale-img');
-        }, 500);
+        }, 250);
 
         if(checkWinner())
         {
@@ -110,4 +110,3 @@ Restart.addEventListener('click',()=>{
 })
 
 
-// Homework Project: Rock paper scissor
